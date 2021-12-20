@@ -1,0 +1,281 @@
+:root {
+  --main-bg-color: hsl(217, 54%, 11%);
+  --main-card-bg-color: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: var(--main-bg-color);
+}
+
+#card {
+  background: var(--main-card-bg-color);
+  width: 327px;
+  height: 543px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+  border-radius: 15px;
+}
+
+h1 {
+  height: 28px;
+  width: 278px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+#infos {
+  height: 52px;
+  width: 278px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: #8bacd9;
+  margin-bottom: 16px;
+}
+
+#ethereum-clock {
+  display: flex;
+  height: 19px;
+  width: 278px;
+  list-style-type: none;
+  margin-bottom: 16px;
+  justify-items: center;
+}
+
+li:first-child {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+  color: #00fff8;
+  height: 19px;
+  width: 88.48479461669922px;
+}
+
+li:first-child::before {
+  content: "";
+  background-image: url(images/icon-ethereum.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 6.48px;
+  vertical-align: -6px;
+  padding: 6px;
+  height: 18px;
+  width: 11px;
+}
+
+li:nth-last-child(1) {
+  height: 19px;
+  width: 92.69499206542969px;
+  font-size: 15px;
+  line-height: 19px;
+  color: #8bacd9;
+  margin-left: 96.82px;
+}
+
+li:nth-last-child(1)::before {
+  content: "";
+  background-image: url(images/icon-clock.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 7.7px;
+  padding: 7.7px;
+  vertical-align: -55%;
+  height: 13.3px;
+  width: 13.3px;
+}
+
+#card-author {
+  height: 33px;
+  width: 278px;
+  border-radius: 0px;
+  display: flex;
+}
+
+#creators {
+  font-size: 15px;
+  line-height: 19px;
+  color: #8bacd9;
+  height: 19px;
+  width: 170px;
+  margin-bottom: 31px;
+}
+
+#author {
+  color: #ffffff;
+}
+
+#img-box {
+  margin: 24px auto;
+  width: 278px;
+  height: 278px;
+  border-radius: 8px;
+  background: #00fff8;
+  position: relative;
+  
+}
+
+/* Images (2) */
+
+#nft-img {
+  width: 278px;
+  height: 278px;
+  border-radius: 8px;
+}
+
+#nft-img:hover {
+  opacity: 0.5;
+}
+
+#overlay {
+  width: 278px;
+  height: 278px;
+  border-radius: 8px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  opacity: 0;
+  background: cyan;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+}
+
+#overlay:hover:after {
+  content: "";
+  background: url(images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 44px;
+  height: 33px;
+  color: white;
+  margin-left: 43%;
+  padding: 20px;
+}
+
+#overlay:hover {
+  opacity: 0.7;
+}
+
+#image-avatar {
+  width: 33px;
+  height: 33px;
+  margin-right: 16px;
+  transform: translateY(-25%);
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+/* lines */
+#separate-item {
+  height: 1px;
+  width: 278px;
+  border: 0;
+  border-top: 1px solid #2e405a;
+  margin-bottom: 23px;
+}
+
+/* hover states */
+
+h1:hover {
+  color: #00fff8;
+}
+
+#author:hover {
+  color: #00fff8;
+}
+
+/* Attributions */
+.attribution {
+  height: 90px;
+  width: 270px;
+  font-size: 15px;
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
+/* Medias queries */
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+  #card {
+    height: 596px;
+    width: 350px;
+  }
+
+  #img-box,
+  #nft-img {
+    height: 302px;
+    width: 302px;
+  }
+
+  #overlay {
+    height: 302px;
+    width: 302px;
+  }
+
+
+  h1{
+    height: 28px;
+    width: 302px;
+    
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  #infos{
+    height: 52px;
+    width: 302px;
+  }
+
+  #ethereum-clock{
+    height: 20px;
+    width: 301px;
+  }
+
+  #separate-item{
+    height: 1px;
+    width: 302px;
+  
+    
+  }
+
+  #card-author{
+    height: 33px;
+    width: 230px;
+align-self: flex-start;    
+margin-left: 24px;
+margin-top: 16px;
+font-size: 16px;
+line-height: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+
+    #overlay{
+    }
+    
+}
